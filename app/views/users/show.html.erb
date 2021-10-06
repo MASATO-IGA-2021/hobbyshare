@@ -1,0 +1,56 @@
+<%= stylesheet_link_tag 'user.show', :media => "all" %>
+<body>
+<div class ="top">
+  <h1>マイページ</h1>
+</div>
+<div class = "main">
+  <div class ="owndetail">
+    <div class ="name">
+      <p>ユーザーネーム :<%= @user.name %></p>
+    </div>
+    <div class ="mail">
+      <p>メールアドレス : <%= @user.email %></p>
+    </div>
+    <div class ="profil">
+      <p>プロフィール </p>
+      <div class ="profil_box"> 
+        <p><%= @user.profile %></p>
+      </div>
+      <%= render "follow_form" %>
+      <% if current_user.id == @user.id %>
+      <%= button_to "編集する", edit_user_registration_path %>
+        <% end %>
+    </div>
+  </div>
+  <h2>ユーザーの投稿</h2>
+  <div class = "post">
+    <% @user.posts.each do |t| %>
+      <div class="postbox">
+      <p>ユーザーネーム:</p><a href="/users/<%= t.user.id %>"><%= t.user.name %></a>
+      <br><%= image_tag t.image_url, size: "320x280" if t.image? %></br>
+      <p1>contents:<%= t.body %></p1>
+      <% t.tags.each do |tag| %>
+        <br>tag:<%= tag.name %></br>
+      <% end %>
+      
+      </div>
+    <% end %>
+  </div>
+  <h2>ユーザーがいいねした投稿一覧</h2>
+  <div class ="post">
+    
+      <% @user.liked_posts.each do |t| %>
+        <div class = "postbox" >
+        <p><%= t.user.name %></p>
+        <%= image_tag t.image_url, size: "320x280" if t.image? %>
+        <% t.tags.each do |tag| %>
+          <br>tag:<%= tag.name %></br>
+        <% end %>
+        <br><%= t.body %></br>
+        </div>
+      <% end %>
+  </div>
+</div>
+<body>
+
+

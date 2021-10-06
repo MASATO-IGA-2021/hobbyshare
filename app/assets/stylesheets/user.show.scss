@@ -1,0 +1,60 @@
+.top{
+  padding: 1rem 3rem;
+  color: #fff;
+  border-radius: 100vh;
+  background-image: -webkit-gradient(linear, right top, left top, from(#9be15d), to(#00e3ae));
+  background-image: -webkit-linear-gradient(right, #9be15d 0%, #00e3ae 100%);
+  background-image: linear-gradient(to left, #9be15d 0%, #00e3ae 100%);
+  width:100%;
+ }
+ .main{
+    margin-bottom:500px ;
+}
+  
+ 
+.owndetail{
+    height:600px;
+    
+}
+.name {
+    margin: 0%;
+    padding: 0%;
+}
+.mail{
+    margin: 0%;
+    padding: 0%;
+}
+.profil{
+    margin: 0%;
+    padding: 0%;
+}
+.profil_box{
+    margin:0%;
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+
+.profil_box:before, .profi:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+}
+.profil_box:before {left: 10px;}
+.profil_box:before {right: 10px;}
+.profil_box p {
+    margin: 0; 
+    padding: 0;
+}
+
+
+
+
+
+
+

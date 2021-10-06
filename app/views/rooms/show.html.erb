@@ -1,0 +1,30 @@
+<%= stylesheet_link_tag 'rooms.show', :media => "all" %>
+
+<div class ="header">
+  <div class="room">
+  <h1><%= "ルーム名：#{@room.name}" %></h1>
+  </div>
+</div>
+
+<div class ="main">
+  <div class ="content">
+    <div class="posts">
+      <% @posts.each do |post| %>
+        <div class = "chatbox">
+          <p><%= post.user.name %>さん</p>
+          <p>><%= post.message %></p>
+        </div>
+      <% end %>
+    </div>
+    <div class ="post_content">
+      <%= form_for [@room, @chat] do |f| %>
+        <div class="field">
+          <%= f.text_field :message, :size => 140 %>
+          <%= f.submit "送信する" %>
+          <%= link_to 'フォロワーをルームに招待する', inviting_room_path(room_id:params[:room_id], user_id:current_user.id) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

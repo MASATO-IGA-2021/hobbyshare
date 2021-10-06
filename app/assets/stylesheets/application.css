@@ -1,0 +1,88 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ body{
+   height: 130%;
+ }
+main{
+  margin-bottom:  250px;
+  padding-bottom: 200px;
+ }
+ 
+
+
+
+   
+
+      
+      
+
+  
+  
+    .navigation{
+      /* flexboxで要素を真ん中に指定 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1300px;
+    }
+    .navigation ul {
+      width: 100%;
+    }
+    .button{
+      display: block;
+      padding:10px;
+      background:white;
+      width:20%;
+      float:left;
+      /* 上下にボーダーを指定 */
+      border-top: 1px solid #d6d6d6;
+      border-bottom: 1px solid #d6d6d6;
+      /* カーソルを離した際のアニメーションの速度調整 */
+      transition:.2s all;
+    }
+    .button p {
+      height: 10px;
+      font-weight: 300;
+    }
+    .button a {
+      color:#333333;
+      /* リンク指定した要素のスタイルを削除 */
+      text-decoration:none;
+    }
+    .navigation:hover .button{
+      /* ナビゲーションをマウスオーバーした際のアニメーションの動きを指定 */
+      filter:blur(3px);
+      /* 全てのボタンがぼやける */
+      opacity:.8;
+      /* 全てのボタンを通常サイズに指定 */
+      transform: scale(1);
+    }
+    .navigation:hover .button:hover{
+      /* アニメーション速度を指定 */
+      transition: .6s;
+      /* hoverしたボタンを少し拡大するように指定 */
+      transform:scale(1.1);
+      /* hoverしている要素のみぼやけない指定 */
+      filter:blur(0px);
+      opacity:1;
+      /* ボタンをhoverした際に上下のボーダーの色を濃くする */
+      border-top: 1px solid #888888;
+      border-bottom: 1px solid #888888;
+    }
+    .navigation:hover .button:hover > p {
+      font-weight: bold;
+    }
+  

@@ -1,0 +1,81 @@
+<%= stylesheet_link_tag 'post.show', :media => "all" %>
+<div class ="top">
+  <h1>投稿詳細</h1>
+</div>
+<div class="post1">
+  <img src= <%= @post.image_url %> width="400" height="400" >
+  <br><%= @post.body %></br>
+  <br><%= @post.created_at %></br>
+  <% if user_signed_in? %>
+      <% if current_user.already_liked?(@post) %>
+          <%= link_to post_like_path(@post), method: :delete do %>
+            <i class="fas fa-heart"></i><%= @post.likes.count %>
+          <% end %>
+      <% else %>
+          <%= link_to post_likes_path(@post), method: :post do %>
+            <i class="far fa-heart"></i><%= @post.likes.count %>
+          <% end %>
+      <% end %>
+  <% else %>
+      <i class="far fa-heart"></i><%= @post.likes.count %>  
+  <% end %>
+  <% @post.tags.each do |tag| %>
+    <%= tag.name %>
+  <% end %>  
+</div>
+
+<div id='map'></div>
+
+<style>
+#map {
+  height: 600px;
+  width: 100%;
+}
+</style>
+
+<!-- js部分 -->
+<script>
+//初期マップの設定
+let map
+let marker
+function initMap(){
+  geocoder = new google.maps.Geocoder()
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    center:  {lat: <%= @post.lat %>, lng: <%= @post.lng %>},
+    zoom: 15,
+  });
+
+   marker = new google.maps.Marker({
+    position:  {lat: <%= @post.lat %>, lng: <%= @post.lng %>},
+    map: map
+  });
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUtzKwuZg0tOfYv315QZr6mt67cP95Jlo&callback=initMap" async defer></script>
+
+<div class="message-wrapper">
+  <p>コメント一覧</p>
+  <% @messages.each do |m| %>
+    <div>
+      <%= m.user.email unless m.user.blank? %>
+      <br>
+      <%= m.content %>
+    </div>
+      <br>
+  <% end %>
+
+  <% if user_signed_in? %>
+    <%= form_with(model: [@post, @message], local: true) do |f| %>
+      <%= f.text_area :content %>
+      <%= button_tag type: "submit" do %>
+        <i class="far fa-comments"></i> コメントする
+      <% end %>
+    <% end %>
+  <% end %>
+
+</div>
+<h2>いいねしたユーザー</h2>
+<% @post.liked_users.each do |user| %>
+  <li><%= user.email %></li>
+<% end %>

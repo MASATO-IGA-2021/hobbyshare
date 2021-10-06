@@ -1,0 +1,18 @@
+.head{
+    padding: 1rem 3rem;
+    color: #fff;
+    border-radius: 100vh;
+    background-image: -webkit-gradient(linear, right top, left top, from(#9be15d), to(#00e3ae));
+    background-image: -webkit-linear-gradient(right, #9be15d 0%, #00e3ae 100%);
+    background-image: linear-gradient(to left, #9be15d 0%, #00e3ae 100%);
+}
+.field1{
+    margin: 25px 0px ;
+}
+.check_box{
+    border: solid 3px #0a0a0a;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    width: 500px;
+    margin:3px 300px 15px 900px ;
+
+}

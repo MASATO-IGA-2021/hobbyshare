@@ -1,0 +1,28 @@
+<h1>Hobbyshare</h1>
+<h3>新規投稿</h3>
+<%= form_for @post do |f| %>
+  <div class="field">
+    <%= f.label :body %>
+    <%= f.text_field :body, :size => 140 %>
+  </div>
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+  <div class="check_box">
+    <span>タグ</span>
+    <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+    <div>
+      <%= tag.label do %>
+      <%= tag.check_box %>
+      <%= tag.text %>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <%= f.submit "投稿する" %>
+<% end %>
+<%= link_to "投稿一覧に戻る", posts_path %>

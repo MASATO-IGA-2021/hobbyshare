@@ -1,0 +1,18 @@
+<%= stylesheet_link_tag 'users.invite', :media => "all" %>
+<body>
+<div class="header">
+<h3>フォロー一覧</h3>
+</div>
+
+<div class ="main">
+<% @user.following.each do |user| %>
+    <% if Entry.exists?(user_id: user.id) %>
+        <br><%= user.name %>さん 招待済み</br>
+    <% else %>
+        <%= link_to entries_room_path(id: params[:id], user_id: user.id), method: :post do %>
+        <%= user.name %>
+        <% end %>
+    <% end %>
+<% end %>
+</div>
+</body>

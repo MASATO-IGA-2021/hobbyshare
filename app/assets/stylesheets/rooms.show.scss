@@ -1,0 +1,56 @@
+.room h1{
+    padding: 1rem 3rem;
+    color: #fff;
+    border-radius: 100vh;
+    background-image: -webkit-gradient(linear, right top, left top, from(#9be15d), to(#00e3ae));
+    background-image: -webkit-linear-gradient(right, #9be15d 0%, #00e3ae 100%);
+    background-image: linear-gradient(to left, #9be15d 0%, #00e3ae 100%);
+  }
+  
+.posts{
+    background-color: rgba($color: #ffffff, $alpha: 1.0);
+    display: flex;
+    flex-flow: column;
+    justify-content:start;
+    margin: 1em 0;
+    padding: 1em;
+    background-color: #fff;
+    border: solid 3px #ffffff;
+
+}
+.chatbox {
+    position: relative;
+    display: inline-block;
+    margin: 1.5em 0 1.5em 15px;
+    padding: 7px 10px;
+    min-width: 120px;
+    max-width: 100%;
+    color: #555;
+    font-size: 16px;
+    background: #e0edff;
+    display:item;
+    width: 70%;
+    
+  }
+  
+  .chatbox:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-right: 15px solid #e0edff;
+  }
+  
+  .chatbox p {
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+  margin-bottom:500px ;
+
+}
+
+  

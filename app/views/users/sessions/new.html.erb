@@ -1,0 +1,34 @@
+<%= stylesheet_link_tag 'sessions.new', :media => "all" %>
+<div id = "headline">
+  <h1>ログイン</h1>  
+  <h5>hobbyshare</h5>
+</div>
+<div class ="back_img">
+<div class="circle">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field1">
+      <%= f.label :mail %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field2">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "current-password" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field3">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+
+    <div class="actions">
+      <%= f.submit "ログイン" %>
+      <%= render "users/shared/links" %>
+    </div>
+  <% end %>
+
+</div>
+</div> 
+

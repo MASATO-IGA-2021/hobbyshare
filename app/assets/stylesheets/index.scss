@@ -1,0 +1,83 @@
+.top{
+    padding: 1rem 3rem;
+    color: #fff;
+    border-radius: 100vh;
+    background-image: -webkit-gradient(linear, right top, left top, from(#9be15d), to(#00e3ae));
+    background-image: -webkit-linear-gradient(right, #9be15d 0%, #00e3ae 100%);
+    background-image: linear-gradient(to left, #9be15d 0%, #00e3ae 100%);
+}
+.post{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+}
+.postbox{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background: #FFF;
+    border: solid 3px #0a0a0a;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    width: 500px;
+    display:item;   
+}
+.postbox br {
+    margin: 0; 
+    padding: 0;
+    font-size: 82px;
+}
+.postbox p {
+    margin: 0; 
+    padding: 0;
+    font-style:black;
+}
+
+.rankingbox{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    
+}
+.rank1{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background: #FFF;
+    border: solid 3px #0a0a0a;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    width: 500px;
+    display:item;   
+}
+
+
+.rank2{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background: #FFF;
+    border: solid 3px #0a0a0a;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    width: 500px;
+    display:item;   
+}
+
+.rank3{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background: #FFF;
+    border: solid 3px #0a0a0a;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    width: 500px;
+    display:item;   
+}
+.main{
+  margin-bottom:200px ;
+
+}

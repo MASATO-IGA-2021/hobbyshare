@@ -1,0 +1,31 @@
+#headline{
+    font-family: Ranga;
+    background-color:rgba($color: #6ba4be, $alpha: 0.4);
+    margin: 0px;
+    padding-bottom: 0%;
+}
+#headline h2{
+    text-align: center;
+}
+#headline h5{
+    text-align: center;
+}
+
+.back_img{
+    background-image: url("../assets/camera-unsplash.jpg");
+    background-size:cover ;
+    margin: 0px;
+    height: 1500px;
+}
+.circle{
+    margin:0%;
+    padding: 5%;
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    left: 800px;
+    top: 300px;
+    border-radius: 50%;
+    background-color:rgba($color: #e4eaee, $alpha: 0.6);
+  }
+ 

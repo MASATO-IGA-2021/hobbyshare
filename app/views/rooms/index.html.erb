@@ -1,0 +1,32 @@
+<%= stylesheet_link_tag 'rooms.index', :media => "all" %>
+
+<div class = "make_talkroom">
+<% if user_signed_in? %>
+  <h2>トークルーム作成</h2>
+</div>
+<div class = "making_room">
+<%= form_with model: @room do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
+</div>
+<div class="room" >
+  <div class = "joinedroom">
+  <h5>参加済トークルーム一覧</h5>
+  <% @rooms.each do |room| %>
+    <%= link_to room_path(room.id) do %>
+    <%= room.name %>
+    <% end %>
+  <% end %>
+  </div>
+  <div class = "invitedroom">
+  <h5>招待されているトークルーム</h5>
+  <% @entry_room.each do |entry| %>
+    <%= link_to entry_path(entry.room.id,current_user.id), method: :delete do %>
+    <%= entry.room.name %>
+    <% end %>
+  <% end %>
+  </div>
+</div>
+<% end %>

@@ -1,0 +1,85 @@
+
+.make_talkroom{
+    padding: 1rem 3rem;
+    color: #fff;
+    border-radius: 100vh;
+    background-image: -webkit-gradient(linear, right top, left top, from(#9be15d), to(#00e3ae));
+    background-image: -webkit-linear-gradient(right, #9be15d 0%, #00e3ae 100%);
+    background-image: linear-gradient(to left, #9be15d 0%, #00e3ae 100%);
+
+}
+.making_room{
+    margin: 3% 0% 5% 0%;
+}
+.main{
+    height: 500px;
+}
+.room{
+    width: 100%;
+    height:75%
+
+}
+.joinedroom{
+    position: relative;
+    padding: 0.25em 1em;
+    margin: 2em 0;
+    top: 0;
+    background: #efefef;
+}
+.joinedroom:before, .joinedroom:after{ 
+    position: absolute;
+    top: 0;
+    content:'';
+    width: 10px;
+    height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.joinedroom:before{
+    border-left: dotted 2px #15adc1;
+    border-top: dotted 2px #15adc1;
+    border-bottom: dotted 2px #15adc1;
+    left: 0;
+}
+.joinedroom:after{
+    border-top: dotted 2px #15adc1;
+    border-right: dotted 2px #15adc1;
+    border-bottom: dotted 2px #15adc1;
+    right: 0;
+}
+.joinedroom p {
+    margin: 0; 
+    padding: 0;
+}
+.invitedroom{
+    position: relative;
+    padding: 0.25em 1em;
+    margin: 2em 0;
+    top: 0;
+    background: #efefef;
+}
+.invitedroom:before, .invitedroom:after{ 
+    position: absolute;
+    top: 0;
+    content:'';
+    width: 10px;
+    height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.invitedroom:before{
+    border-left: dotted 2px #15adc1;
+    border-top: dotted 2px #15adc1;
+    border-bottom: dotted 2px #15adc1;
+    left: 0;
+}
+.invitedroom:after{
+    border-top: dotted 2px #15adc1;
+    border-right: dotted 2px #15adc1;
+    border-bottom: dotted 2px #15adc1;
+    right: 0;
+}
+.invitedroom p {
+    margin: 0; 
+    padding: 0;
+}
