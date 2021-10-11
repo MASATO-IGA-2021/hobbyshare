@@ -1,16 +1,12 @@
 
-
-途中
 # **HOBBYSHARE**
 
 ### 趣味の感動を共有できる投稿サイト
 ### 作成の経緯
+多様性の時代と言われているのに趣味に対しての理解が進んでいないため、趣味の感動を共有できる場所がないと感じ、自らの手でそのような場所を作り、少数派の趣味をお持ちの方でも
+自信を持って自分の趣味を発信してほしいと考えたため作成しました。
 
-"hoge"が何かを簡潔に紹介する
  
-# DEMO
- 
-"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
  
 # Features
  新たな趣味を見つけることから趣味の感動を共有して同じ趣味友達ができるまで趣味に関することが一通りできるようなサイトです。
@@ -20,31 +16,20 @@
  フォロワー限定で招待されなければチャットに参加できないようにするという工夫をしました。
  
 # Requirement
- 
-"hoge"を動かすのに必要なライブラリなどを列挙する
- 
-* 
-* 
- 
-# Installation
- 
-Requirementで列挙したライブラリなどのインストール方法を説明する
- 
-
+* Ruby 2.73
+* Ruby on rails 6.1.3.1
  
 # Usage
+ 1サインアップして自分のアカウントを作る。
+ 2 自分のアカウントでログイン
+ 3 趣味のタグを選び、趣味の場所をgooglemapで調べて、画像を貼り付け、説明を加えて投稿する。
+ 4 投稿一覧ページを見ることができる。また下にスクロールするとランキング機能や、ユーザー全員の投稿の際に指定したgooglemapの表示を見ることができる。
+ 5 気になったユーザーを見つけたときフォローする。(フォローバックされたときチャットルームを作ることができる。)
+ 6 一覧ページで趣味をタグで分類できる。
  
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
- 
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
  
 # Note
- 
-注意点などがあれば書く
+デザインは模索中。
  
 # Author
  
@@ -57,27 +42,4 @@ python demo.py
 ライセンスを明示する
 
 
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
